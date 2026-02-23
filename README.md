@@ -4,13 +4,11 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+У роботі з api використав:
+/character з параметрами page і name для відображення списку персонажів і пошуку
 
-A few resources to get you started if this is your first Flutter project:
+/character/1,2,3 batch-запит персонажів за id, використовується на екрані епізоду щоб отримати імена. 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+/episode/1,2,3 те саме для епізодів, використовується на екрані персонажа. id для batch-запитів витягуємо з url'ів, які вже є в моделях (episodeUrls і characterUrls)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Навігація проста, через Navigator.push. На наступний екран передаються уже завантажені дані (Character / Episode)
